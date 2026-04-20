@@ -1,0 +1,25 @@
+---
+title: "Vyshnavi Yalamanchi"
+image: images/profile.jpg
+toc: false
+about:
+  template: trestles
+  links:
+    - icon: linkedin
+      text: LinkedIn
+      href: https://linkedin.com/in/vyshnavi-yalamanchi-130900308
+    - icon: github
+      text: GitHub
+      href: https://github.com/vyshnavi-yalamanchi
+    - icon: envelope
+      text: Email
+      href: mailto:vyasjdp@gmail.com
+---
+
+## Hello!
+
+I'm Vyshnavi, a Computer Science graduate currently pursuing my Master’s degree in Business Analytics at Dublin City University, with a strong interest in applying data to solve business problems. I am keen to explore the business sector further, particularly in management. I have worked on deep learning projects and gained exposure to finance, retail, and entrepreneurship, enabling me to analyse data, generate insights, and contribute to solving real-world business challenges.
+
+This site is my personal portfolio where I share my [projects](projects/index.qmd), [background](about.qmd), and what I've been [learning along the way](reflection.qmd).
+
+Feel free to [reach out](contact.qmd) if you'd like to connect.
