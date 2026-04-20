@@ -10,7 +10,7 @@ about:
       href: https://linkedin.com/in/vyshnavi-yalamanchi-130900308
     - icon: github
       text: GitHub
-      href: https://github.com/vyshnavi-yalamanchi
+      href: https://github.com/vyshnaviyalamanchi
     - icon: envelope
       text: Email
       href: mailto:vyasjdp@gmail.com

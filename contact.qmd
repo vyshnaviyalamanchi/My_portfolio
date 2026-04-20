@@ -10,7 +10,7 @@ I'm always happy to chat about data science, potential collaborations, or just s
 - {{< fa phone >}} +353 899517397
 - {{< fa location-dot >}} Dublin, Ireland
 - {{< fa brands linkedin >}} [LinkedIn](https://linkedin.com/in/vyshnavi-yalamanchi-130900308){target="_blank"}
-- {{< fa brands github >}} [GitHub](https://github.com/vyshnavi-yalamanchi){target="_blank"}
+- {{< fa brands github >}} [GitHub](https://github.com/vyshnaviyalamanchi){target="_blank"}
 
 ::: {.callout-note}
 My CV is available through the **CV** link in the navigation bar above.
