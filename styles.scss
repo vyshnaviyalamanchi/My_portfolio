@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap');
 
 $font-family-sans-serif: 'Source Sans Pro', sans-serif !default;
+$navbar-bg: #2C3E50 !default;
 
 /*-- scss:rules --*/
 body {
@@ -34,6 +35,15 @@ h1 {
 
 table {
   width: 100%;
+}
+
+table thead {
+  background-color: #2C3E50;
+  color: white;
+}
+
+table thead th {
+  color: white !important;
 }
 
 .quarto-grid-item {
