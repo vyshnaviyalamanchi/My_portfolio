@@ -20,7 +20,7 @@ Understanding this equation helped me debug issues in my NLP pipeline that I wou
 
 I genuinely did not know tools like Quarto existed before this module. Being able to write Python code that actually runs inside a published website — not just screenshots — felt like a major upgrade. It also changed how I think about communicating technical work. A live, interactive chart is far more convincing to a non-technical audience than a table of numbers.
 
-{{< video https://www.youtube.com/watch?v=_f3latmOhew >}}
+{{< video https://www.youtube.com/embed/_f3latmOhew >}}
 
 ### Working with Git
 
