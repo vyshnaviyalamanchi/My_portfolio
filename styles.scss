@@ -9,9 +9,19 @@ $body-bg: #FDFDFD !default;
 $footer-bg: #2C3E50 !default;
 
 /*-- scss:rules --*/
+body {
+  text-align: left;
+  line-height: 1.75;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
 h1, h2, h3 {
   color: $primary;
   margin-top: 1.5rem;
+  text-align: left;
 }
 
 h1 {
@@ -26,6 +36,10 @@ h1 {
 
 .callout {
   border-radius: 4px;
+}
+
+table {
+  width: 100%;
 }
 
 table thead {

@@ -8,9 +8,9 @@ I'm originally from India, where I completed my **B.Tech in Computer Science and
 
 ## What I've Done
 
-- **Kilkenny Design Practicum** — Currently working with Kilkenny Design through a university collaboration, applying analytics to real business challenges.
-- **AI Intern at Coincent.ai** — Worked on a Vision Transformer project, learning about image classification and deep learning in practice.
-- **Finance Team Lead, University Cricket Club** — Handled budgets, planned events, and coordinated with sponsors. Not technical, but taught me a lot about teamwork and responsibility.
+- **Kilkenny Design Practicum**:- Currently working with Kilkenny Design through a university collaboration, applying analytics to real business challenges.
+- **AI Intern at Coincent.ai**:- Worked on a Vision Transformer project, learning about image classification and deep learning in practice.
+- **Finance Team Lead, University Cricket Club**:- Handled budgets, planned events, and coordinated with sponsors. Not technical, but taught me a lot about teamwork and responsibility.
 
 ## Skills
 
