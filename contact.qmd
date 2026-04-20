@@ -12,10 +12,6 @@ I'm always happy to chat about data science, potential collaborations, or just s
 - {{< fa brands linkedin >}} [LinkedIn](https://linkedin.com/in/vyshnavi-yalamanchi-130900308){target="_blank"}
 - {{< fa brands github >}} [GitHub](https://github.com/vyshnaviyalamanchi){target="_blank"}
 
-::: {.callout-note}
-My CV is available through the **CV** link in the navigation bar above.
-:::
-
 ## References
 
 Available on request. I've worked with faculty at **Dublin City University** (MSc programme and Kilkenny Design practicum) and **GITAM University** (B.Tech thesis).
@@ -36,4 +32,4 @@ Available on request. I've worked with faculty at **Dublin City University** (MS
 
 : Tools and resources used in this portfolio {.hover}
 
-All project code is my own work unless otherwise noted.
+
