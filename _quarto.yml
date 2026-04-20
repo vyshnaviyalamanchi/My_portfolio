@@ -33,7 +33,11 @@ website:
 format:
   html:
     theme:
-      - cosmo
-      - styles.scss
+      light:
+        - cosmo
+        - styles.scss
+      dark:
+        - darkly
+        - styles.scss
     toc: true
     highlight-style: github
