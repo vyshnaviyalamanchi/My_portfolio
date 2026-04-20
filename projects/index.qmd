@@ -1,0 +1,11 @@
+---
+title: "Projects"
+listing:
+  contents: list
+  type: grid
+  sort: "date desc"
+  categories: true
+  fields: [image, date, title, description, categories]
+---
+
+Below are my technical projects, each with interactive visualisations and executable Python code.
