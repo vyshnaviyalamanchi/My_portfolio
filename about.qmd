@@ -1,0 +1,29 @@
+---
+title: "About Me"
+---
+
+## Background
+
+I'm originally from India, where I completed my **B.Tech in Computer Science and Engineering** at GITAM University in Visakhapatnam. After graduating in 2025, I moved to Dublin to pursue an **MSc in Business Analytics** at Dublin City University. My work bridges AI research with practical business applications.
+
+## What I've Done
+
+- **Kilkenny Design Practicum** — Currently working with Kilkenny Design through a university collaboration, applying analytics to real business challenges.
+- **AI Intern at Coincent.ai** — Worked on a Vision Transformer project, learning about image classification and deep learning in practice.
+- **Finance Team Lead, University Cricket Club** — Handled budgets, planned events, and coordinated with sponsors. Not technical, but taught me a lot about teamwork and responsibility.
+
+## Skills
+
+| Area | What I Use |
+|---|---|
+| Machine Learning | PyTorch, Scikit-Learn, CNNs, Vision Transformers |
+| NLP | BERT, LLaMA 3.3, Groq API, Prompt Engineering |
+| Data & Analytics | Pandas, NumPy, Plotly, SQL |
+| Web & Dev Tools | Python, C, HTML/CSS, Git, Quarto |
+
+: My main technical skills and tools {.striped .hover}
+
+## Where I'm Headed
+
+1. **Right now:** Finish my MSc strong and deliver useful work at the Kilkenny Design practicum.
+2. **Longer term:** Work as a data scientist, ideally on projects where AI can genuinely help people — healthcare, sustainability, that sort of thing.
