@@ -4,27 +4,25 @@ title: "Reflection"
 
 ## Looking Back
 
-Honestly, when I started this module, I didn't expect to learn as much as I did. I came in thinking I knew Python pretty well, and I did — but building actual end-to-end systems is a completely different thing from writing scripts in a notebook.
+Honestly, when I started this module, I did not expect to learn as much as I did. I came in thinking I knew Python pretty well, and I did — but building actual end-to-end systems is a completely different thing from writing scripts in a notebook.
 
 ### Working with Models
 
-The biggest thing I learned was the difference between *understanding* a model and *deploying* one. I spent weeks on the BERT vs GenAI project, and most of that time wasn't on the model itself — it was on data pipelines, API rate limits, and making sure everything ran reliably.
+The biggest thing I learned was the difference between *understanding* a model and *deploying* one. I spent weeks on the BERT vs GenAI project, and most of that time was not on the model itself — it was on data pipelines, API rate limits, and making sure everything ran reliably.
 
-The attention mechanism in Transformers went from something I'd read about in papers to something I actually used:
+The attention mechanism in Transformers went from something I had read about in papers to something I actually used:
 
 $$\text{Attention}(Q, K, V) = \text{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right) V$$
 
-Understanding this equation helped me debug issues in my NLP pipeline that I wouldn't have caught otherwise.
+Understanding this equation helped me debug issues in my NLP pipeline that I would not have caught otherwise.
 
-### Quarto
+### Working with Quarto
 
-I genuinely didn't know tools like Quarto existed before this module. Being able to write code that actually runs inside a website — not just screenshots of code — felt like a major upgrade from what I was doing before.
+I genuinely did not know tools like Quarto existed before this module. Being able to write Python code that actually runs inside a published website — not just screenshots — felt like a major upgrade. It also changed how I think about communicating technical work. A live, interactive chart is far more convincing to a non-technical audience than a table of numbers.
 
-{{< video https://www.youtube.com/embed/YK6ZVKMnDOw >}}
+### Working with Git
 
-### Git
-
-I'll admit — I used to just upload files to GitHub through the browser. Learning proper Git workflows (commits, branches, `.gitignore`) was one of those things that seemed tedious at first but now I can't imagine working without it.
+I will admit — I used to upload files to GitHub through the browser. Learning proper Git workflows (commits, branches, `.gitignore`) was one of those things that seemed tedious at first but now I cannot imagine working without it. Every commit message became a small note to my future self about what I changed and why.
 
 ## Challenges
 
@@ -35,6 +33,22 @@ graph LR
     E[Messy Git habits] --> F[Proper version control]
 ```
 
-The hardest part was probably making complex ML results understandable on a website. Plotly helped a lot with that — being able to create interactive charts that people can actually explore made my work much more accessible.
+The hardest part was making complex ML results understandable on a website. Plotly helped a lot — interactive charts that people can actually explore made my work much more accessible than static images ever could.
 
-I'm looking forward to the **Kilkenny Design practicum** — it'll be my first time applying analytics to a real business problem, and I want to make sure I can communicate findings clearly to non-technical people. That's probably the most important skill I've picked up from this module.
+::: {.callout-note}
+**Key takeaway:** The most important skill in data science is not building the best model — it is communicating your findings clearly to people who were not in the room when you built it.
+:::
+
+## What I Accomplished
+
+- [x] Built and deployed a full portfolio website using Quarto and GitHub Pages
+- [x] Completed two end-to-end ML projects with live Python visualisations
+- [x] Learned proper Git version control with descriptive, incremental commits
+- [x] Applied NLP techniques (BERT, LLaMA 3.3) to a real business problem
+- [ ] Present findings at the Kilkenny Design practicum
+- [ ] Continue building in public and document new projects here
+
+## Looking Forward
+
+I am looking forward to the **Kilkenny Design practicum** — it will be my first time applying analytics to a real client problem. I want to make sure I can communicate findings clearly to non-technical stakeholders, which is probably the single most important skill I have developed through this module. Beyond the practicum, I plan to keep this portfolio updated as I take on new projects, so it grows into a genuine professional presence rather than just an assignment submission.
+
