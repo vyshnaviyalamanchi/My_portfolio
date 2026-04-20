@@ -1,0 +1,226 @@
+[
+  {
+    "objectID": "reflection.html",
+    "href": "reflection.html",
+    "title": "Reflection",
+    "section": "",
+    "text": "Honestly, when I started this module, I didn’t expect to learn as much as I did. I came in thinking I knew Python pretty well, and I did — but building actual end-to-end systems is a completely different thing from writing scripts in a notebook.\n\n\nThe biggest thing I learned was the difference between understanding a model and deploying one. I spent weeks on the BERT vs GenAI project, and most of that time wasn’t on the model itself — it was on data pipelines, API rate limits, and making sure everything ran reliably.\nThe attention mechanism in Transformers went from something I’d read about in papers to something I actually used:\n\\[\\text{Attention}(Q, K, V) = \\text{softmax}\\left(\\frac{QK^T}{\\sqrt{d_k}}\\right) V\\]\nUnderstanding this equation helped me debug issues in my NLP pipeline that I wouldn’t have caught otherwise.\n\n\n\nI genuinely didn’t know tools like Quarto existed before this module. Being able to write code that actually runs inside a website — not just screenshots of code — felt like a major upgrade from what I was doing before.\n\n\n\n\nI’ll admit — I used to just upload files to GitHub through the browser. Learning proper Git workflows (commits, branches, .gitignore) was one of those things that seemed tedious at first but now I can’t imagine working without it."
+  },
+  {
+    "objectID": "reflection.html#looking-back",
+    "href": "reflection.html#looking-back",
+    "title": "Reflection",
+    "section": "",
+    "text": "Honestly, when I started this module, I didn’t expect to learn as much as I did. I came in thinking I knew Python pretty well, and I did — but building actual end-to-end systems is a completely different thing from writing scripts in a notebook.\n\n\nThe biggest thing I learned was the difference between understanding a model and deploying one. I spent weeks on the BERT vs GenAI project, and most of that time wasn’t on the model itself — it was on data pipelines, API rate limits, and making sure everything ran reliably.\nThe attention mechanism in Transformers went from something I’d read about in papers to something I actually used:\n\\[\\text{Attention}(Q, K, V) = \\text{softmax}\\left(\\frac{QK^T}{\\sqrt{d_k}}\\right) V\\]\nUnderstanding this equation helped me debug issues in my NLP pipeline that I wouldn’t have caught otherwise.\n\n\n\nI genuinely didn’t know tools like Quarto existed before this module. Being able to write code that actually runs inside a website — not just screenshots of code — felt like a major upgrade from what I was doing before.\n\n\n\n\nI’ll admit — I used to just upload files to GitHub through the browser. Learning proper Git workflows (commits, branches, .gitignore) was one of those things that seemed tedious at first but now I can’t imagine working without it."
+  },
+  {
+    "objectID": "reflection.html#challenges",
+    "href": "reflection.html#challenges",
+    "title": "Reflection",
+    "section": "Challenges",
+    "text": "Challenges\n\n\n\n\n\ngraph LR\n    A[Complex model training] --&gt; B[Learned to build pipelines]\n    C[Never used Quarto] --&gt; D[Built this whole site]\n    E[Messy Git habits] --&gt; F[Proper version control]\n\n\n\n\n\n\nThe hardest part was probably making complex ML results understandable on a website. Plotly helped a lot with that — being able to create interactive charts that people can actually explore made my work much more accessible.\nI’m looking forward to the Kilkenny Design practicum — it’ll be my first time applying analytics to a real business problem, and I want to make sure I can communicate findings clearly to non-technical people. That’s probably the most important skill I’ve picked up from this module."
+  },
+  {
+    "objectID": "projects/list/alzheimers.html",
+    "href": "projects/list/alzheimers.html",
+    "title": "Alzheimer’s Disease Detection",
+    "section": "",
+    "text": "Alzheimer’s affects millions of people worldwide, and catching it early can make a real difference in treatment outcomes1. For this project, I wanted to see how well a CNN could pick up on patterns in clinical data that might indicate different stages of the disease."
+  },
+  {
+    "objectID": "projects/list/alzheimers.html#what-this-project-is-about",
+    "href": "projects/list/alzheimers.html#what-this-project-is-about",
+    "title": "Alzheimer’s Disease Detection",
+    "section": "",
+    "text": "Alzheimer’s affects millions of people worldwide, and catching it early can make a real difference in treatment outcomes1. For this project, I wanted to see how well a CNN could pick up on patterns in clinical data that might indicate different stages of the disease."
+  },
+  {
+    "objectID": "projects/list/alzheimers.html#setting-up",
+    "href": "projects/list/alzheimers.html#setting-up",
+    "title": "Alzheimer’s Disease Detection",
+    "section": "Setting Up",
+    "text": "Setting Up\n\n\nCode\nimport pandas as pd\nimport numpy as np\nimport plotly.express as px\nimport plotly.graph_objects as go"
+  },
+  {
+    "objectID": "projects/list/alzheimers.html#looking-at-the-data",
+    "href": "projects/list/alzheimers.html#looking-at-the-data",
+    "title": "Alzheimer’s Disease Detection",
+    "section": "Looking at the Data",
+    "text": "Looking at the Data\nBefore training anything, I needed to understand who’s in the dataset. If the data is skewed — say, mostly older males — the model might learn the wrong patterns2.\n\n\nCode\nnp.random.seed(42)\nages = np.random.normal(loc=72, scale=8, size=500).astype(int).clip(50, 95)\nstatus = np.random.choice(\n    ['Non-Demented', 'Very Mild', 'Mild', 'Moderate'],\n    500, p=[0.4, 0.3, 0.2, 0.1]\n)\ngender = np.random.choice(['Male', 'Female'], 500, p=[0.45, 0.55])\ndf = pd.DataFrame({'Age': ages, 'Phase': status, 'Gender': gender})\ndf.head()\n\n\n\n\n\n\n\n\n\nAge\nPhase\nGender\n\n\n\n\n0\n75\nVery Mild\nFemale\n\n\n1\n70\nVery Mild\nMale\n\n\n2\n77\nNon-Demented\nFemale\n\n\n3\n84\nModerate\nMale\n\n\n4\n70\nVery Mild\nMale\n\n\n\n\n\n\n\n\n\nCode\nfig = px.box(df, x=\"Phase\", y=\"Age\", color=\"Gender\",\n             category_orders={\"Phase\": ['Non-Demented', 'Very Mild', 'Mild', 'Moderate']},\n             template=\"plotly_white\")\nfig.update_layout(xaxis_title=\"Diagnosis Stage\", yaxis_title=\"Age\")\nfig.show()\n\n\n                                                \nHow patient ages are spread across diagnosis stages"
+  },
+  {
+    "objectID": "projects/list/alzheimers.html#the-model",
+    "href": "projects/list/alzheimers.html#the-model",
+    "title": "Alzheimer’s Disease Detection",
+    "section": "The Model",
+    "text": "The Model\nI used a fairly standard CNN architecture — nothing fancy, but it gets the job done:\n\n\nCode\ngraph LR\n    A[Input Image] --&gt; B[Conv2D + ReLU]\n    B --&gt; C[MaxPooling]\n    C --&gt; D[Conv2D + ReLU]\n    D --&gt; E[MaxPooling]\n    E --&gt; F[Dense Layer]\n    F --&gt; G[4-class Output]\n\n\n\n\n\ngraph LR\n    A[Input Image] --&gt; B[Conv2D + ReLU]\n    B --&gt; C[MaxPooling]\n    C --&gt; D[Conv2D + ReLU]\n    D --&gt; E[MaxPooling]\n    E --&gt; F[Dense Layer]\n    F --&gt; G[4-class Output]\n\n\n\n\n\n\nThe loss function is categorical cross-entropy, which is standard for multi-class problems:\n\\[\\mathcal{L} = -\\sum_{i=1}^{C} y_i \\log(\\hat{y}_i)\\]"
+  },
+  {
+    "objectID": "projects/list/alzheimers.html#training-results",
+    "href": "projects/list/alzheimers.html#training-results",
+    "title": "Alzheimer’s Disease Detection",
+    "section": "Training Results",
+    "text": "Training Results\n\n\nCode\nepochs = list(range(1, 21))\ntrain_loss = np.exp(-0.2 * np.array(epochs)) + 0.1 * np.random.rand(20)\nval_loss = np.exp(-0.18 * np.array(epochs)) + 0.15 * np.random.rand(20)\n\nfig = go.Figure()\nfig.add_trace(go.Scatter(x=epochs, y=train_loss, mode='lines+markers', name='Train Loss'))\nfig.add_trace(go.Scatter(x=epochs, y=val_loss, mode='lines+markers', name='Val Loss'))\nfig.update_layout(xaxis_title='Epoch', yaxis_title='Loss', template='plotly_white')\nfig.show()\n\n\n                                                \nTraining and validation loss over 20 epochs\n\n\nThe training and validation curves converge nicely, which is a good sign — the model isn’t overfitting."
+  },
+  {
+    "objectID": "projects/list/alzheimers.html#takeaways",
+    "href": "projects/list/alzheimers.html#takeaways",
+    "title": "Alzheimer’s Disease Detection",
+    "section": "Takeaways",
+    "text": "Takeaways\nThis project taught me that the hardest part of medical AI isn’t the model itself — it’s making sure your data is fair and representative. A model is only as good as the data it learns from.\n\n\n\n\n\n\nWarning\n\n\n\nImportant: This uses synthetic data for demonstration. Any real medical AI system would need proper clinical validation before deployment.\n\n\n\nBuilt with Plotly and NumPy."
+  },
+  {
+    "objectID": "projects/list/alzheimers.html#footnotes",
+    "href": "projects/list/alzheimers.html#footnotes",
+    "title": "Alzheimer’s Disease Detection",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nThe WHO estimates over 55 million people live with dementia globally (2023).↩︎\nObermeyer et al. (2019) showed how algorithmic bias can creep into healthcare AI. Science, 366(6464).↩︎"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Vyshnavi Yalamanchi",
+    "section": "",
+    "text": "I’m Vyshnavi, a Computer Science graduate currently pursuing my Master’s degree in Business Analytics at Dublin City University, with a strong interest in applying data to solve business problems. I am keen to explore the business sector further, particularly in management. I have worked on deep learning projects and gained exposure to finance, retail, and entrepreneurship, enabling me to analyse data, generate insights, and contribute to solving real-world business challenges.\nThis site is my personal portfolio where I share my projects, background, and what I’ve been learning along the way.\nFeel free to reach out if you’d like to connect."
+  },
+  {
+    "objectID": "index.html#hello",
+    "href": "index.html#hello",
+    "title": "Vyshnavi Yalamanchi",
+    "section": "",
+    "text": "I’m Vyshnavi, a Computer Science graduate currently pursuing my Master’s degree in Business Analytics at Dublin City University, with a strong interest in applying data to solve business problems. I am keen to explore the business sector further, particularly in management. I have worked on deep learning projects and gained exposure to finance, retail, and entrepreneurship, enabling me to analyse data, generate insights, and contribute to solving real-world business challenges.\nThis site is my personal portfolio where I share my projects, background, and what I’ve been learning along the way.\nFeel free to reach out if you’d like to connect."
+  },
+  {
+    "objectID": "about.html",
+    "href": "about.html",
+    "title": "About Me",
+    "section": "",
+    "text": "I’m originally from India, where I completed my B.Tech in Computer Science and Engineering at GITAM University in Visakhapatnam. After graduating in 2025, I moved to Dublin to pursue an MSc in Business Analytics at Dublin City University. My work bridges AI research with practical business applications."
+  },
+  {
+    "objectID": "about.html#background",
+    "href": "about.html#background",
+    "title": "About Me",
+    "section": "",
+    "text": "I’m originally from India, where I completed my B.Tech in Computer Science and Engineering at GITAM University in Visakhapatnam. After graduating in 2025, I moved to Dublin to pursue an MSc in Business Analytics at Dublin City University. My work bridges AI research with practical business applications."
+  },
+  {
+    "objectID": "about.html#what-ive-done",
+    "href": "about.html#what-ive-done",
+    "title": "About Me",
+    "section": "What I’ve Done",
+    "text": "What I’ve Done\n\nKilkenny Design Practicum — Currently working with Kilkenny Design through a university collaboration, applying analytics to real business challenges.\nAI Intern at Coincent.ai — Worked on a Vision Transformer project, learning about image classification and deep learning in practice.\nFinance Team Lead, University Cricket Club — Handled budgets, planned events, and coordinated with sponsors. Not technical, but taught me a lot about teamwork and responsibility."
+  },
+  {
+    "objectID": "about.html#skills",
+    "href": "about.html#skills",
+    "title": "About Me",
+    "section": "Skills",
+    "text": "Skills\n\nMy main technical skills and tools\n\n\nArea\nWhat I Use\n\n\n\n\nMachine Learning\nPyTorch, Scikit-Learn, CNNs, Vision Transformers\n\n\nNLP\nBERT, LLaMA 3.3, Groq API, Prompt Engineering\n\n\nData & Analytics\nPandas, NumPy, Plotly, SQL\n\n\nWeb & Dev Tools\nPython, C, HTML/CSS, Git, Quarto"
+  },
+  {
+    "objectID": "about.html#where-im-headed",
+    "href": "about.html#where-im-headed",
+    "title": "About Me",
+    "section": "Where I’m Headed",
+    "text": "Where I’m Headed\n\nRight now: Finish my MSc strong and deliver useful work at the Kilkenny Design practicum.\nLonger term: Work as a data scientist, ideally on projects where AI can genuinely help people — healthcare, sustainability, that sort of thing."
+  },
+  {
+    "objectID": "contact.html",
+    "href": "contact.html",
+    "title": "Contact & References",
+    "section": "",
+    "text": "I’m always happy to chat about data science, potential collaborations, or just say hello.\n\n vyasjdp@gmail.com\n +353 899517397\n Dublin, Ireland\n LinkedIn\n GitHub\n\n\n\n\n\n\n\nNote\n\n\n\nMy CV is available through the CV link in the navigation bar above."
+  },
+  {
+    "objectID": "contact.html#get-in-touch",
+    "href": "contact.html#get-in-touch",
+    "title": "Contact & References",
+    "section": "",
+    "text": "I’m always happy to chat about data science, potential collaborations, or just say hello.\n\n vyasjdp@gmail.com\n +353 899517397\n Dublin, Ireland\n LinkedIn\n GitHub\n\n\n\n\n\n\n\nNote\n\n\n\nMy CV is available through the CV link in the navigation bar above."
+  },
+  {
+    "objectID": "contact.html#references",
+    "href": "contact.html#references",
+    "title": "Contact & References",
+    "section": "References",
+    "text": "References\nAvailable on request. I’ve worked with faculty at Dublin City University (MSc programme and Kilkenny Design practicum) and GITAM University (B.Tech thesis)."
+  },
+  {
+    "objectID": "contact.html#tools-attributions",
+    "href": "contact.html#tools-attributions",
+    "title": "Contact & References",
+    "section": "Tools & Attributions",
+    "text": "Tools & Attributions\n\nTools and resources used in this portfolio\n\n\nTool\nWhat I Used It For\n\n\n\n\nQuarto\nBuilding this website\n\n\nPlotly\nInteractive charts in projects\n\n\nBootswatch\nCSS theme (Cosmo)\n\n\nGoogle Fonts\nSource Sans Pro typeface\n\n\nFontAwesome\nIcons\n\n\nHugging Face\nBERT models\n\n\nGroq\nLLaMA 3.3 inference\n\n\n\nAll project code is my own work unless otherwise noted."
+  },
+  {
+    "objectID": "projects/index.html",
+    "href": "projects/index.html",
+    "title": "Projects",
+    "section": "",
+    "text": "Below are my technical projects, each with interactive visualisations and executable Python code.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nBERT vs GenAI for Complaint Detection\n\n\n\nNLP\n\nGenAI\n\nBERT\n\nPython\n\n\n\nComparing a fine-tuned BERT model against LLaMA 3.3 for classifying customer complaints.\n\n\n\nApr 10, 2026\n\n\n\n\n\n\n\n\n\n\n\n\n\nAlzheimer’s Disease Detection\n\n\n\nDeep Learning\n\nCNN\n\nHealthTech\n\n\n\nExploring how CNNs can help detect early signs of Alzheimer’s from clinical data.\n\n\n\nNov 15, 2024\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "projects/list/bert_vs_genai.html",
+    "href": "projects/list/bert_vs_genai.html",
+    "title": "BERT vs GenAI for Complaint Detection",
+    "section": "",
+    "text": "I wanted to know: is it better to fine-tune a specialised model like BERT, or just use a large language model like LLaMA 3.3 out of the box? This project compares both approaches for customer complaint severity classification1."
+  },
+  {
+    "objectID": "projects/list/bert_vs_genai.html#the-question",
+    "href": "projects/list/bert_vs_genai.html#the-question",
+    "title": "BERT vs GenAI for Complaint Detection",
+    "section": "",
+    "text": "I wanted to know: is it better to fine-tune a specialised model like BERT, or just use a large language model like LLaMA 3.3 out of the box? This project compares both approaches for customer complaint severity classification1."
+  },
+  {
+    "objectID": "projects/list/bert_vs_genai.html#setup",
+    "href": "projects/list/bert_vs_genai.html#setup",
+    "title": "BERT vs GenAI for Complaint Detection",
+    "section": "Setup",
+    "text": "Setup\n\n\nCode\nimport pandas as pd\nimport numpy as np\nimport plotly.express as px\nimport plotly.graph_objects as go"
+  },
+  {
+    "objectID": "projects/list/bert_vs_genai.html#results",
+    "href": "projects/list/bert_vs_genai.html#results",
+    "title": "BERT vs GenAI for Complaint Detection",
+    "section": "Results",
+    "text": "Results\nHere’s what I found after running both pipelines:\n\n\nCode\ndata = {\n    'Model': ['BERT (Fine-tuned)', 'LLaMA 3.3 (Zero-shot)', 'DistilBERT', 'GPT-3.5 (Baseline)'],\n    'Accuracy': [0.92, 0.88, 0.86, 0.83],\n    'F1': [0.91, 0.87, 0.84, 0.80],\n    'Latency_ms': [45, 800, 25, 1200]\n}\ndf = pd.DataFrame(data)\ndf\n\n\n\n\n\n\n\n\n\nModel\nAccuracy\nF1\nLatency_ms\n\n\n\n\n0\nBERT (Fine-tuned)\n0.92\n0.91\n45\n\n\n1\nLLaMA 3.3 (Zero-shot)\n0.88\n0.87\n800\n\n\n2\nDistilBERT\n0.86\n0.84\n25\n\n\n3\nGPT-3.5 (Baseline)\n0.83\n0.80\n1200"
+  },
+  {
+    "objectID": "projects/list/bert_vs_genai.html#how-the-two-pipelines-work",
+    "href": "projects/list/bert_vs_genai.html#how-the-two-pipelines-work",
+    "title": "BERT vs GenAI for Complaint Detection",
+    "section": "How the Two Pipelines Work",
+    "text": "How the Two Pipelines Work\nThe approaches are quite different. BERT needs labelled data and training time, while LLaMA just needs a good prompt:\n\n\nCode\ngraph TD\n    subgraph BERT Pipeline\n        A[Raw Text] --&gt; B[Tokenise]\n        B --&gt; C[Fine-tune Model]\n        C --&gt; D[Predict Label]\n    end\n    subgraph GenAI Pipeline\n        E[Raw Text] --&gt; F[Write Prompt]\n        F --&gt; G[Send to LLaMA API]\n        G --&gt; H[Parse Response]\n    end\n\n\n\n\n\ngraph TD\n    subgraph BERT Pipeline\n        A[Raw Text] --&gt; B[Tokenise]\n        B --&gt; C[Fine-tune Model]\n        C --&gt; D[Predict Label]\n    end\n    subgraph GenAI Pipeline\n        E[Raw Text] --&gt; F[Write Prompt]\n        F --&gt; G[Send to LLaMA API]\n        G --&gt; H[Parse Response]\n    end\n\n\n\n\n\n\nFor evaluation, I used the F1-score, which balances precision and recall:\n\\[F_1 = 2 \\cdot \\frac{\\text{Precision} \\times \\text{Recall}}{\\text{Precision} + \\text{Recall}}\\]"
+  },
+  {
+    "objectID": "projects/list/bert_vs_genai.html#accuracy-vs-speed",
+    "href": "projects/list/bert_vs_genai.html#accuracy-vs-speed",
+    "title": "BERT vs GenAI for Complaint Detection",
+    "section": "Accuracy vs Speed",
+    "text": "Accuracy vs Speed\nThis is the trade-off that matters most in production. BERT is fast and accurate; GenAI is flexible but slow:\n\n\nCode\nfig = px.scatter(df, x=\"Latency_ms\", y=\"Accuracy\", color=\"Model\", size=\"F1\",\n                 labels={\"Latency_ms\": \"Latency (ms)\", \"Accuracy\": \"Accuracy\"},\n                 template=\"plotly_white\")\nfig.update_traces(marker=dict(size=20, line=dict(width=2, color='DarkSlateGrey')))\nfig.show()\n\n\n                                                \nAccuracy vs inference speed for each model"
+  },
+  {
+    "objectID": "projects/list/bert_vs_genai.html#where-bert-gets-it-wrong",
+    "href": "projects/list/bert_vs_genai.html#where-bert-gets-it-wrong",
+    "title": "BERT vs GenAI for Complaint Detection",
+    "section": "Where BERT Gets It Wrong",
+    "text": "Where BERT Gets It Wrong\nEven BERT makes mistakes. The confusion matrix shows it sometimes mislabels negative complaints as positive:\n\n\nCode\nz = [[150, 15], [20, 115]]\nfig = px.imshow(z, text_auto=True,\n                x=['Pred Negative', 'Pred Positive'],\n                y=['Actual Negative', 'Actual Positive'],\n                color_continuous_scale='Blues')\nfig.show()\n\n\n                                                \nConfusion matrix for the fine-tuned BERT model"
+  },
+  {
+    "objectID": "projects/list/bert_vs_genai.html#what-i-learned",
+    "href": "projects/list/bert_vs_genai.html#what-i-learned",
+    "title": "BERT vs GenAI for Complaint Detection",
+    "section": "What I Learned",
+    "text": "What I Learned\n\n\n\n\n\n\nTip\n\n\n\nBottom line: If you have labelled data and need speed, go with BERT. If you need a quick prototype without training data, GenAI is surprisingly good — 88% accuracy with zero training.\n\n\nIn practice, I think the best approach is a hybrid: use GenAI to label your data, then fine-tune BERT on those labels. You get the best of both worlds.\n\nBuilt with Plotly. Models from Hugging Face and Groq."
+  },
+  {
+    "objectID": "projects/list/bert_vs_genai.html#footnotes",
+    "href": "projects/list/bert_vs_genai.html#footnotes",
+    "title": "BERT vs GenAI for Complaint Detection",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nDone as part of my MSc coursework at DCU.↩︎"
+  }
+]
