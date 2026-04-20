@@ -1,0 +1,40 @@
+---
+title: "Reflection"
+---
+
+## Looking Back
+
+Honestly, when I started this module, I didn't expect to learn as much as I did. I came in thinking I knew Python pretty well, and I did — but building actual end-to-end systems is a completely different thing from writing scripts in a notebook.
+
+### Working with Models
+
+The biggest thing I learned was the difference between *understanding* a model and *deploying* one. I spent weeks on the BERT vs GenAI project, and most of that time wasn't on the model itself — it was on data pipelines, API rate limits, and making sure everything ran reliably.
+
+The attention mechanism in Transformers went from something I'd read about in papers to something I actually used:
+
+$$\text{Attention}(Q, K, V) = \text{softmax}\left(\frac{QK^T}{\sqrt{d_k}}\right) V$$
+
+Understanding this equation helped me debug issues in my NLP pipeline that I wouldn't have caught otherwise.
+
+### Quarto
+
+I genuinely didn't know tools like Quarto existed before this module. Being able to write code that actually runs inside a website — not just screenshots of code — felt like a major upgrade from what I was doing before.
+
+{{< video https://www.youtube.com/embed/YK6ZVKMnDOw >}}
+
+### Git
+
+I'll admit — I used to just upload files to GitHub through the browser. Learning proper Git workflows (commits, branches, `.gitignore`) was one of those things that seemed tedious at first but now I can't imagine working without it.
+
+## Challenges
+
+```{mermaid}
+graph LR
+    A[Complex model training] --> B[Learned to build pipelines]
+    C[Never used Quarto] --> D[Built this whole site]
+    E[Messy Git habits] --> F[Proper version control]
+```
+
+The hardest part was probably making complex ML results understandable on a website. Plotly helped a lot with that — being able to create interactive charts that people can actually explore made my work much more accessible.
+
+I'm looking forward to the **Kilkenny Design practicum** — it'll be my first time applying analytics to a real business problem, and I want to make sure I can communicate findings clearly to non-technical people. That's probably the most important skill I've picked up from this module.

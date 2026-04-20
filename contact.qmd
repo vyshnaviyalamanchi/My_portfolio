@@ -1,0 +1,39 @@
+---
+title: "Contact & References"
+---
+
+## Get in Touch
+
+I'm always happy to chat about data science, potential collaborations, or just say hello.
+
+- {{< fa envelope >}} [vyasjdp@gmail.com](mailto:vyasjdp@gmail.com)
+- {{< fa phone >}} +353 899517397
+- {{< fa location-dot >}} Dublin, Ireland
+- {{< fa brands linkedin >}} [LinkedIn](https://linkedin.com/in/vyshnavi-yalamanchi-130900308){target="_blank"}
+- {{< fa brands github >}} [GitHub](https://github.com/vyshnavi-yalamanchi){target="_blank"}
+
+::: {.callout-note}
+My CV is available through the **CV** link in the navigation bar above.
+:::
+
+## References
+
+Available on request. I've worked with faculty at **Dublin City University** (MSc programme and Kilkenny Design practicum) and **GITAM University** (B.Tech thesis).
+
+---
+
+## Tools & Attributions
+
+| Tool | What I Used It For |
+|---|---|
+| [Quarto](https://quarto.org){target="_blank"} | Building this website |
+| [Plotly](https://plotly.com/python/){target="_blank"} | Interactive charts in projects |
+| [Bootswatch](https://bootswatch.com){target="_blank"} | CSS theme (Cosmo) |
+| [Google Fonts](https://fonts.google.com){target="_blank"} | Source Sans Pro typeface |
+| [FontAwesome](https://fontawesome.com){target="_blank"} | Icons |
+| [Hugging Face](https://huggingface.co){target="_blank"} | BERT models |
+| [Groq](https://groq.com){target="_blank"} | LLaMA 3.3 inference |
+
+: Tools and resources used in this portfolio {.hover}
+
+All project code is my own work unless otherwise noted.
