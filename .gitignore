@@ -1,0 +1,16 @@
+/.quarto/
+/_site/
+/.Rproj.user/
+.env
+.ipynb_checkpoints
+__pycache__
+
+**/*.quarto_ipynb
+
+**/*.quarto_ipynb
+**/*.quarto_ipynb_1
+**/*.quarto_ipynb_2
+
+**/*.quarto_ipynb
+**/*.quarto_ipynb_1
+**/*.quarto_ipynb_2

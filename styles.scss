@@ -1,0 +1,47 @@
+/*-- scss:defaults --*/
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@400;600;700&display=swap');
+
+$font-family-sans-serif: 'Source Sans Pro', sans-serif !default;
+$primary: #34495E !default;
+$link-color: #2980B9 !default;
+$navbar-bg: #2C3E50 !default;
+$body-bg: #FDFDFD !default;
+$footer-bg: #2C3E50 !default;
+
+/*-- scss:rules --*/
+h1, h2, h3 {
+  color: $primary;
+  margin-top: 1.5rem;
+}
+
+h1 {
+  border-bottom: 2px solid #BDC3C7;
+  padding-bottom: 0.4rem;
+}
+
+.navbar .nav-link {
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.callout {
+  border-radius: 4px;
+}
+
+table thead {
+  background-color: #2C3E50;
+  color: white;
+}
+
+table thead th {
+  color: white !important;
+}
+
+.quarto-grid-item {
+  border: 1px solid #dee2e6;
+  transition: box-shadow 0.2s ease;
+}
+
+.quarto-grid-item:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}

@@ -1,0 +1,39 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "Vyshnavi Yalamanchi"
+  favicon: "images/favicon.png"
+  navbar:
+    logo: "images/logo.png"
+    left:
+      - text: "Home"
+        href: index.qmd
+      - text: "About"
+        href: about.qmd
+      - text: "Projects"
+        href: projects/index.qmd
+      - text: "Reflection"
+        href: reflection.qmd
+      - text: "Contact"
+        href: contact.qmd
+    right:
+      - text: "{{< fa file-pdf >}} CV"
+        href: "cv/Vyshnavi_Yalamanchi_CV.pdf"
+        target: "_blank"
+      - icon: github
+        href: "https://github.com/vyshnavi-yalamanchi"
+        target: "_blank"
+
+  page-footer:
+    left: "© 2026 Vyshnavi Yalamanchi"
+    right: "Built with [Quarto](https://quarto.org)"
+
+format:
+  html:
+    theme:
+      - cosmo
+      - styles.scss
+    toc: true
+    highlight-style: github
