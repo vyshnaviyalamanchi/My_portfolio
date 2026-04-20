@@ -24,7 +24,7 @@ I genuinely did not know tools like Quarto existed before this module. Being abl
 
 ### Working with Git
 
-I will admit — I used to upload files to GitHub through the browser. Learning proper Git workflows (commits, branches, `.gitignore`) was one of those things that seemed tedious at first but now I cannot imagine working without it. Every commit message became a small note to my future self about what I changed and why.
+Working with Git was something I understood, but I didn’t always follow best practices consistently in this project. This made me realize how important clear commits and proper workflows are for tracking changes and debugging. Going forward, I plan to be more disciplined and use Git more effectively.
 
 ## Challenges
 
